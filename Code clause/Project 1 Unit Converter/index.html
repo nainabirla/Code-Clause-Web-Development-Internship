@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="nav">
+            <h1>Unit <span>Converter</span></h1>
+        </div>
+    
+
+    <div class="container">
+        <h1 class="heading">Temperature Converter</h1>
+        <div class="temp-container">
+            <label for="celsius">Celsius</label>
+            <input oninput="computeTemp(event)" type="number" name="celsius" id="celsius">
+        </div>
+        <div class="temp-container">
+            <label for="Fahrenheit">Fahrenheit</label>
+            <input oninput="computeTemp(event)" type="number" name="Fahrenheit" id="Fahrenheit">
+        </div>
+        <div class="temp-container">
+            <label for="Kelvin">Kelvin</label>
+            <input oninput="computeTemp(event)" type="number" name="Kelvin" id="Kelvin">
+        </div>
+`
+    </div>
+
+    <div class="container">
+        <h1 class="heading">Currency Converter</h1>
+        <div class="currency-container">
+            <select id="currency-first">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+                <option value="JPY">JPY</option>
+                <option value="USD" selected>USD</option>
+            </select>
+            <input type="number" id="value-first" value="1" min="0">
+        </div>
+        <div class="currency-container">
+            <select id="currency-second">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR" selected>INR</option>
+                <option value="JPY">JPY</option>
+                <option value="USD">USD</option>
+            </select>
+            <input type="number" id="value-second" disabled>
+        </div>
+        <p class="exchange-rate" id="exchange-rate">1 USD = 138.5802 JPY</p>
+    </div>
+
+    
+
+    <div class="container">
+        <h1 class="heading">Length Converter</h1>
+        <div class="inputContainer">
+            <label for="feet">Feet</label><input type="number" name="" id="feet"  oninput="convertToOthers('feet',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="meter">Meters</label><input type="number" name="" id="meter" oninput="convertToOthers('meter',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="inches">Inches</label><input type="number" name="" id="inches" oninput="convertToOthers('inch',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="cm">Centimeters</label><input type="number" name="" id="cm" oninput="convertToOthers('cm',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="yards">Yards</label><input type="number" name="" id="yards" oninput="convertToOthers('yard',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="km">Kilometers</label><input type="number" name="" id="km" oninput="convertToOthers('km',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="miles">Miles</label><input type="number" name="" id="miles" oninput="convertToOthers('mile',this.value)">
+        </div>
+    </div>    
+    <script src="script.js">
+
+    </script>
+
+</body>
+</html>
